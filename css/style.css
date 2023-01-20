@@ -11,6 +11,10 @@ html{
     box-sizing: inherit;
 }
 
+*:focus{
+    outline: 2px dashed #1e90ff;
+    outline-offset: 2px;
+}
 
 body{
     display: flex;
@@ -20,8 +24,9 @@ body{
     margin: 0;
     font-size: 16px;
     line-height: 1.5;
-    font-family: "Arial", sans-serif;
-    background-color: #fff;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-weight: 400;
+    background-color: #222;
     color: #222;
 }
 
@@ -62,6 +67,7 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 24px;
     width: 100%;
     max-width: 600px;
     background-image: url("../img/left-bg.jpg");
@@ -82,15 +88,27 @@ img{
     line-height: normal;
     letter-spacing: 2px;
     color: #fff;
+    font-family: "Bebas Neue", "Roboto Condesed", 'Arial', sans-serif;
+    font-weight: 400;
 }
 
 .hero-link {
     display: inline-block;
+    font-family: "Bebas Neue", "Roboto Condesed", 'Arial', sans-serif;
+    font-weight: 400;
     background-color: #1e90ff;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+
+.hero-link:hover{
+    background-color: rgba(30, 144, 255, 0.8)
+}
+
+.hero-link:active{
+    background-color: rgba(30, 144, 255, 0.6)
 }
 
 .hero-link-inner {
@@ -109,10 +127,143 @@ img{
     background-repeat: no-repeat;
 }
 
-.hero-link-text {
 
+/* LATEST VIDEOS */
+
+.latest-videos {
+    width: 100%;
+    max-width: 600px;
+    padding: 54px;
+    background-color: #fff;
 }
 
+.latest-videos-heading {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 24px;
+    line-height: normal;
+    font-family: "Bebas Neue", "Open Sans Condesed", "Arial", sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.latest-videos-devider {
+    height: 1px;
+    bottom: 0;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    background-color: #999;
+}
+
+.latest-videos-list {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 24px;
+    list-style: none;
+}
+
+.latest-videos-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.item-latest-videos {
+    display: flex;
+}
+
+.item-latest-videos-img {
+    width: 160px;
+    line-height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.item-latest-videos-info {
+    padding: 16px;
+}
+
+.item-lates-videos-info-heading {
+    margin-top: 0;
+    margin-bottom: 4px;
+    font-family: "Bebas Neue", "Open Sans Condesed", "Arial", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2px;
+}
+
+.item-latest-videos-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #222;
+}
+
+.item-latest-videos-link:hover{
+    color: #1e90ff;
+}
+
+.item-latest-videos-link:active{
+    opacity: 0.6;
+}
+
+.item-latest-videos-info-meta {
+    display: flex;
+    align-items: center;
+    color: #888;
+    font-size: 14px;
+    line-height: normal;
+}
+
+.item-latest-videos-meta-item{
+    display: flex;
+    align-items: center;
+}
+
+.item-latest-videos-meta-item:not(:last-child){
+    margin-right: 24px;
+}
+
+.item-latest-videos-meta-item::before{
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    content: "";
+}
+
+.item-latest-videos-meta-item-published-at::before{
+    background-image: url("../img/clock.svg");
+}
+
+.item-latest-videos-meta-item-views::before{
+    background-image: url("../img/eye.svg");
+}
+
+
+/* LOAD MORE BUTTON */
+.load-more-btn{
+    display: block;
+    width: 100%;
+    border: 0;
+    border-radius: 4px;
+    padding: 12px;
+    background-color: #1e90ff;
+    color: #fff;
+    font-size: 14px;
+    line-height: normal;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.load-more-btn:hover{
+    background-color: rgba(30, 144, 255, 0.8);
+}
+
+.load-more-btn:active{
+    background-color: rgba(30, 144, 255, 0.6);
+}
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
